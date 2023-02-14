@@ -1,13 +1,20 @@
 import React from "react";
-import Card from './Card.js'
-import {robots} from './jsn.js'
-const CardList=()=>{
-    return(
-        <div>
-     <Card id={robots[0].id} name={robots[0].name} email={robots[0].email} addres={robots[0].address.street}/>
-     <Card id={robots[1].id} name={robots[1].name} email={robots[1].email}/>
-
-        </div>
-    )
-}
-export default CardList
+import Card from "./Card";
+import "./CardList.css"
+const CardList = ({ robots }) => {
+  return (
+    <div className="robotiflex">
+      {robots.map((user, i) => {
+        return (
+          <Card
+            key={i}
+            id={robots[i].id}
+            name={robots[i].name}
+            email={robots[i].email}
+          />
+        );
+      })}
+    </div>
+  );
+};
+export default CardList;

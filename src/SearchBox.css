@@ -1,0 +1,12 @@
+.Search{
+    /* height: 35px;
+    width: 190px; */
+    padding:20px ;
+    border:3px black solid ;
+    background-color: dimgrey;
+    color: azure;
+}
+*::placeholder{
+    color: azure;
+
+}
